@@ -42,6 +42,7 @@ class StringServer {
 
 ![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/74e234aa-6722-4104-a110-a6fded032746)
 ![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/baf47127-1340-4ab9-a8ed-928c9b9971fe)
+
 Methods in code that are called: 'handleRequest' in StringServer.java, 'handle' in Server.java
 
 The arguments used in handleRequest is the url. The arguments used in handle is 'exchange' of type final & from class HttpExchange. This is called to authenticate each incoming request.
@@ -50,6 +51,7 @@ The arguments used in handleRequest is the url. The arguments used in handle is 
 
 ![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/b544433b-3309-4615-ad02-b5a944c90aa5)
 ![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/ec630e09-f470-43ee-8723-c7a250779188)
+
 Methods in code that are called: 'handleRequest' in StringServer.java, 'handle' in Server.java
 
 The arguments used in handleRequest is the url. The arguments used in handle is 'exchange' of type final & from class HttpExchange. This is called to authenticate each incoming request.
