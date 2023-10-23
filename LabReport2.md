@@ -38,7 +38,8 @@ class StringServer {
 
         Server.start(port, new Handler());
     }
-}```
+}
+```
 
 ![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/74e234aa-6722-4104-a110-a6fded032746)
 ![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/baf47127-1340-4ab9-a8ed-928c9b9971fe)
