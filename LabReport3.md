@@ -1,8 +1,7 @@
 ## Part 1 - Bugs
 The bug I will be addressing is from List Methods.
 
-A failure-inducing input for the buggy program, as a JUnit test and any associated code:
-(write it as a code block in Markdown):
+**A failure-inducing input for the buggy program, as a JUnit test and any associated code:**
 ```
 import static org.junit.Assert.*;
 import org.junit.*;
@@ -25,7 +24,7 @@ public class ArrayTests {
 
 ```
 
-An input that doesn’t induce a failure, as a JUnit test and any associated code:
+**An input that doesn’t induce a failure, as a JUnit test and any associated code:**
 ```
 import static org.junit.Assert.*;
 import org.junit.*;
@@ -46,10 +45,8 @@ public class ArrayTests {
   }
 }
 ```
-(write it as a code block in Markdown):
 
 The symptom, as the output of running the tests:
-(provide it as a screenshot of running JUnit with at least the two inputs above)
 1st code:
 ![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/5d0579e3-3b59-42cb-b494-dbc30aaf0cf3)
 
@@ -58,7 +55,7 @@ The symptom, as the output of running the tests:
 
 
 
-The bug, as the before-and-after code change required to fix it:
+**The bug, as the before-and-after code change required to fix it:**
 (as two code blocks in Markdown)
 Before code:
 ```
@@ -154,7 +151,8 @@ public class ArrayExamples {
 
 ```
 
-Briefly describe why the fix addresses the issue:
+**Briefly describe why the fix addresses the issue:**
 
 My fix for reverseInPlace addresses the issue because we need to create a temp array to store the new array after modifying the original.
+
 My fix for reversed addresses the issue because the return statement wasn't correct (use 'newArray' instead of 'arr'). If we return 'arr', it returns the original array instead of the modified one.
