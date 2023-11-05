@@ -47,10 +47,13 @@ public class ArrayTests {
 ```
 
 The symptom, as the output of running the tests:
+
 1st code:
+
 ![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/5d0579e3-3b59-42cb-b494-dbc30aaf0cf3)
 
 2nd code:
+
 ![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/fbcc1c68-245b-4f8d-9850-12cc3f6da475)
 
 
