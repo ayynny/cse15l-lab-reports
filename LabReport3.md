@@ -4,6 +4,24 @@ The bug I will be addressing is from List Methods.
 A failure-inducing input for the buggy program, as a JUnit test and any associated code:
 (write it as a code block in Markdown):
 ```
+import static org.junit.Assert.*;
+import org.junit.*;
+
+public class ArrayTests {
+ @Test 
+	public void testReverseInPlace() {
+    int[] input1 = {4,5,3 };
+    ArrayExamples.reverseInPlace(input1);
+    assertArrayEquals(new int[]{3,5,4}, input1);
+	}
+
+  @Test
+  public void testReversed() {
+    int[] input1 = {1,2,3,4,5};
+    assertArrayEquals(new int[]{5,4,3,1,2}, ArrayExamples.reversed(input1));
+  }
+}
+
 
 ```
 
@@ -32,7 +50,10 @@ public class ArrayTests {
 
 The symptom, as the output of running the tests:
 (provide it as a screenshot of running JUnit with at least the two inputs above)
+1st code:
+![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/5d0579e3-3b59-42cb-b494-dbc30aaf0cf3)
 
+2nd code:
 ![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/fbcc1c68-245b-4f8d-9850-12cc3f6da475)
 
 
@@ -134,5 +155,6 @@ public class ArrayExamples {
 ```
 
 Briefly describe why the fix addresses the issue:
+
 My fix for reverseInPlace addresses the issue because we need to create a temp array to store the new array after modifying the original.
 My fix for reversed addresses the issue because the return statement wasn't correct (use 'newArray' instead of 'arr'). If we return 'arr', it returns the original array instead of the modified one.
