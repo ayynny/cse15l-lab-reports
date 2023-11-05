@@ -169,8 +169,7 @@ My fix for reversed addresses the issue because the return statement wasn't corr
 ## Part 2 - Researching Commands
 Command: find
 1. `find` can be used to search for a specific time frame, such as files modified within the last 7 days, by using `-mtime`
-![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/21030d4e-9285-4365-9519-1304a6e371dd)
-
+2. 
 ![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/084b46be-efbd-46bd-88e9-cee999291411)
 
 3. 'find' can be used to search for and delete files that matches a specific pattern or condition. For eaxmple, if we want to delete all .txt files in a directory, we can use `find` with `rm`
