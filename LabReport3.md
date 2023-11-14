@@ -52,11 +52,13 @@ The symptom, as the output of running the tests:
 
 ![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/5d0579e3-3b59-42cb-b494-dbc30aaf0cf3)
 
+This output is incorrect because my expected output is "5 4 3 1 2" when the input was "1 2 3 4 5", and it printed "5 4 4 3 2"
+
 2nd code:
 
 ![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/fbcc1c68-245b-4f8d-9850-12cc3f6da475)
 
-
+This output is correct as expected.
 
 **The bug, as the before-and-after code change required to fix it:**
 (as two code blocks in Markdown)
@@ -170,12 +172,57 @@ My fix for reversed addresses the issue because the return statement wasn't corr
 Command: find
 1. `find` can be used to search for a specific time frame, such as files modified within the last 7 days, by using `-mtime`
    
-![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/084b46be-efbd-46bd-88e9-cee999291411)
+```
+$ find *.java -mtime -1
+ArrayExamples.java
+ArrayTests.java
+
+$ find *.class -mtime -7
+ArrayExamples.class
+ArrayTests.class
+FileExample.class
+LinkedList.class
+Node.class
+StringChecker.class
+```
 
 2. 'find' can be used to search for and delete files that matches a specific pattern or condition. For eaxmple, if we want to delete all .txt files in a directory, we can use `find` with `rm`
    
 ![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/d16292e1-c83a-42ba-bf15-438613544039)
 ![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/e6ff9d93-890c-464a-ae7e-1226e8e5d08c)
+
+In the 1st screenshot, I created meow.txt and rawr.txt. 
+Results of ls:
+```
+
+ArrayExamples.class     ListExamples.class
+ArrayExamples.java      ListExamples.java
+ArrayTests.class        ListTests.java
+ArrayTests.java         meow.txt
+FileExample.class       Node.class
+FileExample.java        rawr.txt
+lib/                    StringChecker.class
+LinkedList.class        test.sh
+LinkedListExample.java
+
+```
+
+
+In the 2nd screenshot, `find *.txt -exec rm rf {} \;` was ran, which searched for any .txt files in the current directory. Here, the meow.txt and rawr.txt files were removed.
+
+Result of ls:
+```
+
+ArrayExamples.class  LinkedListExample.java
+ArrayExamples.java   ListExamples.class
+ArrayTests.class     ListExamples.java
+ArrayTests.java      ListTests.java
+FileExample.class    Node.class
+FileExample.java     StringChecker.class
+lib/                 test.sh
+LinkedList.class
+
+```
 
 ![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/22bb99c6-a90b-41de-b230-893842e80f89)
 ![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/b599841a-1598-46b4-98f3-2b6439d831c6)
