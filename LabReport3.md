@@ -217,6 +217,8 @@ LinkedList.class
 Similarly, `find` was used to search for any .log files via `find *.log exec rm rf {} \;` 
 
 ![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/22bb99c6-a90b-41de-b230-893842e80f89)
+
+
 Result of ls:
 
 
