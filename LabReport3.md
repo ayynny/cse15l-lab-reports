@@ -177,7 +177,10 @@ StringChecker.class
 ![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/e6ff9d93-890c-464a-ae7e-1226e8e5d08c)
 
 In the 1st screenshot, I created meow.txt and rawr.txt. 
+
 Results of ls:
+
+
 ```
 
 ArrayExamples.class     ListExamples.class
@@ -196,6 +199,8 @@ LinkedListExample.java
 In the 2nd screenshot, `find *.txt -exec rm rf {} \;` was ran, which searched for any .txt files in the current directory. Here, the meow.txt and rawr.txt files were removed.
 
 Result of ls after running `find *.txt -exec rm rf {} \;`:
+
+
 ```
 
 ArrayExamples.class  LinkedListExample.java
@@ -213,6 +218,8 @@ Similarly, `find` was used to search for any .log files via `find *.log exec rm 
 
 ![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/22bb99c6-a90b-41de-b230-893842e80f89)
 Result of ls:
+
+
 ```
 
 ArrayExamples.class     ListExamples.class
@@ -248,6 +255,8 @@ LinkedList.class
 
 
 Result from using `find -size 1`
+
+
 ```
 ./.git/COMMIT_EDITMSG
 ./.git/config
@@ -286,6 +295,8 @@ Result from using `find -size 1`
 ```
 
 Result of using `find -size 10`
+
+
 ```
 ./.git/hooks/fsmonitor-watchman.sample
 ./.git/hooks/pre-rebase.sample
