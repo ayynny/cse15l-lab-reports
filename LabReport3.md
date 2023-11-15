@@ -2,6 +2,7 @@
 The bug I will be addressing is from List Methods.
 
 **A failure-inducing input for the buggy program, as a JUnit test and any associated code:**
+
 ```
 import static org.junit.Assert.*;
 import org.junit.*;
@@ -25,6 +26,7 @@ public class ArrayTests {
 ```
 
 **An input that doesn’t induce a failure, as a JUnit test and any associated code:**
+
 ```
 import static org.junit.Assert.*;
 import org.junit.*;
@@ -61,7 +63,6 @@ This output is incorrect because my expected output is "5 4 3 1 2" when the inpu
 This output is correct as expected.
 
 **The bug, as the before-and-after code change required to fix it:**
-(as two code blocks in Markdown)
 
 Before code:
 
@@ -136,13 +137,18 @@ public class ArrayExamples {
 
 
 ```
+
+
 The methods that were changed are reverseInPlace and reversed. 
 reverseInPlace is modified by putting in a new int variable called temp which is assigned arr[i]. temp is used to store the modified array.
 reversed is modified by creating newArray adn returning newArray instead of arr. newArray stores the updated array in reversed order. If arr was returned, it would return the unchanged, original array.
 
+
 **Briefly describe why the fix addresses the issue:**
 
 My fix for reversed addresses the issue because the return statement wasn't correct (use 'newArray' instead of 'arr'). If we return 'arr', it returns the original array instead of the modified one, as explained above. Thus, if arr was returned, the return would be incorrect and the tests would fail. 
+
+
 
 
 
