@@ -224,17 +224,85 @@ LinkedList.class
 
 ```
 
+Similarly, `find` was used to search for any .log files via `find *.log exec rm rf {} \;` 
+
 ![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/22bb99c6-a90b-41de-b230-893842e80f89)
+Result of ls:
+```
+
+ArrayExamples.class     ListExamples.class
+ArrayExamples.java      ListExamples.java
+ArrayTests.class        ListTests.java
+ArrayTests.java         meow.log
+FileExample.class       Node.class
+FileExample.java        rawr.log
+lib/                    StringChecker.class
+LinkedList.class        test.sh
+LinkedListExample.java
+
+
+```
 ![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/b599841a-1598-46b4-98f3-2b6439d831c6)
 
+Result of ls after `find *.log -exec rm rf {} \;` 
 
+```
+
+ArrayExamples.class  LinkedListExample.java
+ArrayExamples.java   ListExamples.class
+ArrayTests.class     ListExamples.java
+ArrayTests.java      ListTests.java
+FileExample.class    Node.class
+FileExample.java     StringChecker.class
+lib/                 test.sh
+LinkedList.class
+
+```
    
 3. `find` can find specific file sizes, such as 100mb, by using `-size`
 
-![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/99040d30-efde-4dee-a73a-ceb137231591)
 
-![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/116183a2-2b81-4bbe-ac53-ef791ee81691)
+Result from using `find -size 1`
+```
+./.git/COMMIT_EDITMSG
+./.git/config
+./.git/description
+./.git/FETCH_HEAD
+./.git/HEAD
+./.git/hooks/applypatch-msg.sample
+./.git/hooks/post-update.sample
+./.git/hooks/pre-applypatch.sample
+./.git/hooks/pre-merge-commit.sample
+./.git/info/exclude
+./.git/logs/refs/remotes/origin/main
+./.git/logs/refs/remotes/upstream/main
+./.git/objects/1d/19eed7a5c60eba04daee84e98f861f087914a8
+./.git/objects/1d/c7e3f0d288d3f3e03161a2f204cd8ebb8c159a  
+./.git/objects/29/ce0bb68dc3ed57506a71d157fa829b7b786149  
+./.git/objects/44/4605347ee04640902febd0cedee252f580d85d
+./.git/objects/68/4e4f22f44e44b8907c467de5da6149d41cfd59
+./.git/objects/71/fc79faeea3fce8d85fd845f3968f90957dd458
+./.git/objects/9b/435df23ba83e184cc85680781d11f947e6c434  
+./.git/objects/a1/fe71666ca61b5887620a48a045a2cc579b1ee2  
+./.git/objects/e6/9de29bb2d1d6434b8b29ae775ad8c2e48c5391  
+./.git/objects/ff/ad576241cb4279e0a38aa1b42912c6dd9efc40
+./.git/packed-refs
+./.git/refs/heads/main
+./.git/refs/remotes/origin/HEAD
+./.git/refs/remotes/origin/main
+./.git/refs/remotes/upstream/HEAD
+./.git/refs/remotes/upstream/main
+./ArrayTests.java
+./ListTests.java
+./Node.class
+./StringChecker.class
+./test.sh
 
+```
+
+Result of using `find -size 10`
+./.git/hooks/fsmonitor-watchman.sample
+./.git/hooks/pre-rebase.sample
    
 4. `find` can search for any empty directories within a directory structure with `-empty`
 ![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/745962a7-6034-4b15-95f2-ee7cc5d49549)
