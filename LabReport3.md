@@ -118,9 +118,9 @@ public class ArrayExamples {
   // Changes the input array to be in reversed order
   static void reverseInPlace(int[] arr) {
     for (int i = 0; i < arr.length / 2; i++) {
-        int temp = arr[i];
-        arr[i] = arr[arr.length - i - 1];
-        arr[arr.length - i - 1] = temp;
+        int temp = arr[i]; //modified
+        arr[i] = arr[arr.length - i - 1]; //modified
+        arr[arr.length - i - 1] = temp; //modified
     }
   }
 
@@ -129,41 +129,20 @@ public class ArrayExamples {
   static int[] reversed(int[] arr) {
     int[] newArray = new int[arr.length];
     for (int i = 0; i < arr.length; i++) {
-        newArray[i] = arr[arr.length - i - 1];
+        newArray[i] = arr[arr.length - i - 1]; 
     }
-    for(int i = 0; i < arr.length; i++){
-    System.out.println(newArray[i]);
-    }
-    return newArray;
+    return newArray; //modified
   }
-
-  // Averages the numbers in the array (takes the mean), but leaves out the
-  // lowest number when calculating. Returns 0 if there are no elements or just
-  // 1 element in the array
-  static double averageWithoutLowest(double[] arr) {
-    if(arr.length < 2) { return 0.0; }
-    double lowest = arr[0];
-    for(double num: arr) {
-      if(num < lowest) { lowest = num; }
-    }
-    double sum = 0;
-    for(double num: arr) {
-      if(num != lowest) { sum += num; }
-    }
-    return sum / (arr.length - 1);
-  }
-
-
-}
 
 
 ```
+The methods that were changed are reverseInPlace and reversed. 
+reverseInPlace is modified by putting in a new int variable called temp which is assigned arr[i]. temp is used to store the modified array.
+reversed is modified by creating newArray adn returning newArray instead of arr. newArray stores the updated array in reversed order. If arr was returned, it would return the unchanged, original array.
 
 **Briefly describe why the fix addresses the issue:**
 
-My fix for reverseInPlace addresses the issue because we need to create a temp array to store the new array after modifying the original.
-
-My fix for reversed addresses the issue because the return statement wasn't correct (use 'newArray' instead of 'arr'). If we return 'arr', it returns the original array instead of the modified one.
+My fix for reversed addresses the issue because the return statement wasn't correct (use 'newArray' instead of 'arr'). If we return 'arr', it returns the original array instead of the modified one, as explained above. Thus, if arr was returned, the return would be incorrect and the tests would fail. 
 
 
 
@@ -210,7 +189,7 @@ LinkedListExample.java
 
 In the 2nd screenshot, `find *.txt -exec rm rf {} \;` was ran, which searched for any .txt files in the current directory. Here, the meow.txt and rawr.txt files were removed.
 
-Result of ls:
+Result of ls after running `find *.txt -exec rm rf {} \;`:
 ```
 
 ArrayExamples.class  LinkedListExample.java
@@ -301,8 +280,10 @@ Result from using `find -size 1`
 ```
 
 Result of using `find -size 10`
+```
 ./.git/hooks/fsmonitor-watchman.sample
 ./.git/hooks/pre-rebase.sample
+```
    
 4. `find` can search for any empty directories within a directory structure with `-empty`
 ![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/745962a7-6034-4b15-95f2-ee7cc5d49549)
@@ -310,55 +291,65 @@ Result of using `find -size 10`
 ![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/5febc297-97dd-4093-963e-343a01177c2e)
 
 
-ChatGPT:
-prompt: `4 interesting or alternate ways to use "find" in command line`
+## ChatGPT prompt: `4 interesting or alternate ways to use "find" in command line`
 
-output:
+The following is the output. After the output was produced, I reiterated what ChatGPT said and used different values as well as my own files to provide examples of my own.
+
+***Output:***
+
 In the command line, the find command is a powerful tool for searching for files and directories. Here are four interesting and alternative ways to use the find command:
 
-Finding Files Modified Within a Specific Time Frame:
+**Finding Files Modified Within a Specific Time Frame:**
+
 You can use the find command to locate files that have been modified within a specific time range. For example, to find all files modified in the last 7 days within a directory, you can use the -mtime option:
 
+```
 lua
 Copy code
 
-```
+
 find /path/to/search -type f -mtime -7
 ```
 
 This command will list files modified in the last 7 days.
 
-Deleting Files Matching a Pattern:
+**Deleting Files Matching a Pattern:**
+
 The find command can be used to search for and delete files matching a particular pattern or condition. For example, to delete all .log files in a directory, you can combine find with the rm command:
 
+```
 bash
 Copy code
 
-```
+
 find /path/to/search -type f -name "*.log" -exec rm {} \;
 ```
 
 This command will remove all .log files in the specified directory.
 
-Finding Large Files:
+**Finding Large Files:**
+
 You can use the find command to locate large files on your system. To find files larger than a specific size (e.g., 100MB), you can use the -size option:
 
+```
 lua
 Copy code
 
-```
+
 find /path/to/search -type f -size +100M
 ```
 
 This command will find files larger than 100MB.
 
-Searching for Empty Directories:
+**Searching for Empty Directories:**
+
 If you want to find and list all empty directories within a directory structure, you can use the find command with the -empty option:
 
+```
 lua
 Copy code
 
-```
+
 find /path/to/search -type d -empty'
 ```
 
