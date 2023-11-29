@@ -2,13 +2,13 @@
 
 ![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/6039d354-8d1b-44b4-bdda-2b91a0a319a1)
 
-Keys pressed: ```<ssh cs15lfa23ks@ieng6.ucsd.edu>``` was entered into the command line. Here, I access the ieng6 machine without a password because I had already saved isa keys into my computer.
+Keys pressed: ```ssh<space>cs15lfa23ks@ieng6.ucsd.edu<entered>``` was entered into the command line. Here, I access the ieng6 machine without a password because I had already saved isa keys into my computer.
 
 ## Step 5:
 
 ![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/413931e6-cacd-431d-806d-3a8814ff2852)
 
-Keys pressed: ```git clone``` to clone the forked repository from my Github account.
+Keys pressed: ```git<space>clone<space>`` to clone the forked repository from my Github account.
 
 ## Step 6:
 
