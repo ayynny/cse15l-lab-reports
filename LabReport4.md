@@ -2,7 +2,7 @@
 
 ![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/6039d354-8d1b-44b4-bdda-2b91a0a319a1)
 
-Keys pressed: ```ssh cs15lfa23ks@ieng6.ucsd.edu``` was entered into the command line. Here, I access the ieng6 machine without a password because I had already saved isa keys into my computer.
+Keys pressed: ```<ssh cs15lfa23ks@ieng6.ucsd.edu>``` was entered into the command line. Here, I access the ieng6 machine without a password because I had already saved isa keys into my computer.
 
 ## Step 5:
 
