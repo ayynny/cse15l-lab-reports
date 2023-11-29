@@ -8,7 +8,7 @@ Keys pressed: ```ssh<space>cs15lfa23ks@ieng6.ucsd.edu<enter>``` was entered into
 
 ![image](https://github.com/ayynny/cse15l-lab-reports/assets/61796361/413931e6-cacd-431d-806d-3a8814ff2852)
 
-Keys pressed: ```git<space>clone<space>`` to clone the forked repository from my Github account.
+Keys pressed: ```git<space>clone<space>``` to clone the forked repository from my Github account.
 
 ## Step 6:
 
